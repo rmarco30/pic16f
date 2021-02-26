@@ -74,7 +74,7 @@ void lcd_cmd(unsigned char cmd) {
 
 void lcd_init(void) {
     
-    i2c_master_init(9600, _XTAL_FREQ);
+    i2c_master_init(100000);
     __delay_ms(250);
     __delay_ms(20);
     i2c_slave(0x00);

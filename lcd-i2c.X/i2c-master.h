@@ -9,9 +9,8 @@
 #define	I2C_H
 
 #include <stdint.h>
-#include <xc.h>
 
-void i2c_master_init(unsigned long baud_rate, unsigned long freq_osc);
+void i2c_master_init( unsigned long baud_rate);
 void i2c_is_idle(void);
 void i2c_start(void);
 void i2c_rep_start(void);
@@ -22,9 +21,9 @@ uint8_t i2c_read(uint8_t ack);                      // 0 = ack, 1 = nack
 
 // MASTER FUNCTIONS
 
-void i2c_master_init(unsigned long baud_rate, unsigned long freq_osc) {
+void i2c_master_init(unsigned long baud_rate) {
     TRISC |= 0x18;
-    SSPADD = (uint8_t)((freq_osc / (4 * baud_rate)) - 1);
+    SSPADD = (uint8_t)((_XTAL_FREQ / (4 * baud_rate)) - 1);
     SSPSTAT |= 0x80;
     SSPCON |= 0x28;
     SSPCON2 |= 0x00;
