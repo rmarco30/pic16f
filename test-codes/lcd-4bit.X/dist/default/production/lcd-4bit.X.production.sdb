@@ -1,0 +1,123 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"30 C:\Users\rlmarco\MPLABXProjects\demo-codes\lcd-4bit.X/lcd-4bit.h
+[v _lcd_clock lcd_clock `(v  1 e 1 0 ]
+"38
+[v _lcd_data lcd_data `(v  1 e 1 0 ]
+"61
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+"69
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"75
+[v _lcd_goto_xy lcd_goto_xy `(v  1 e 1 0 ]
+"93
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"110
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+"124
+[v _lcd_write_string lcd_write_string `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"13 C:\Users\rlmarco\MPLABXProjects\demo-codes\lcd-4bit.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"1500 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f877a.h
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2756
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"2759
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"2762
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"2765
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"2768
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"2771
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"13 C:\Users\rlmarco\MPLABXProjects\demo-codes\lcd-4bit.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"25
+} 0
+"124 C:\Users\rlmarco\MPLABXProjects\demo-codes\lcd-4bit.X/lcd-4bit.h
+[v _lcd_write_string lcd_write_string `(v  1 e 1 0 ]
+{
+[v lcd_write_string@str str `*.24uc  1 a 1 wreg ]
+"126
+[v lcd_write_string@i i `i  1 a 2 6 ]
+"124
+[v lcd_write_string@str str `*.24uc  1 a 1 wreg ]
+"126
+[v lcd_write_string@str str `*.24uc  1 a 1 8 ]
+"129
+} 0
+"110
+[v _lcd_write lcd_write `(v  1 e 1 0 ]
+{
+[v lcd_write@byte byte `uc  1 a 1 wreg ]
+"112
+[v lcd_write@high_nibble high_nibble `uc  1 a 1 4 ]
+[v lcd_write@low_nibble low_nibble `uc  1 a 1 3 ]
+"110
+[v lcd_write@byte byte `uc  1 a 1 wreg ]
+"114
+[v lcd_write@byte byte `uc  1 a 1 5 ]
+"122
+} 0
+"93
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"108
+} 0
+"75
+[v _lcd_goto_xy lcd_goto_xy `(v  1 e 1 0 ]
+{
+[v lcd_goto_xy@r r `uc  1 a 1 wreg ]
+"76
+[v lcd_goto_xy@temp temp `uc  1 a 1 9 ]
+[v lcd_goto_xy@high4 high4 `uc  1 a 1 8 ]
+[v lcd_goto_xy@low4 low4 `uc  1 a 1 7 ]
+"75
+[v lcd_goto_xy@r r `uc  1 a 1 wreg ]
+[v lcd_goto_xy@c c `uc  1 p 1 3 ]
+"77
+[v lcd_goto_xy@r r `uc  1 a 1 6 ]
+"91
+} 0
+"69
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+{
+"73
+} 0
+"61
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+{
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_cmd@cmd cmd `uc  1 a 1 wreg ]
+"63
+[v lcd_cmd@cmd cmd `uc  1 a 1 2 ]
+"67
+} 0
+"38
+[v _lcd_data lcd_data `(v  1 e 1 0 ]
+{
+[v lcd_data@data data `uc  1 a 1 wreg ]
+[v lcd_data@data data `uc  1 a 1 wreg ]
+"40
+[v lcd_data@data data `uc  1 a 1 0 ]
+"59
+} 0
+"30
+[v _lcd_clock lcd_clock `(v  1 e 1 0 ]
+{
+"36
+} 0

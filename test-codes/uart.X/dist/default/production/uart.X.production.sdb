@@ -1,0 +1,134 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"16 C:\Users\rlmarco\MPLABXProjects/includes/uart.h
+[v _uart_init uart_init `(v  1 e 1 0 ]
+"36
+[v _uart_tx_char uart_tx_char `(v  1 e 1 0 ]
+"42
+[v _uart_rx_char uart_rx_char `(uc  1 e 1 0 ]
+"55
+[v _uart_tx_str uart_tx_str `(v  1 e 1 0 ]
+"61
+[v _uart_rx_str uart_rx_str `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"9 C:\Users\rlmarco\MPLABXProjects\demo-codes\uart.X\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S38 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"995 C:\Program Files\Microchip\xc8\v2.31\pic\include\proc\pic16f877a.h
+[s S47 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S51 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S54 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S57 . 1 `S38 1 . 1 0 `S47 1 . 1 0 `S51 1 . 1 0 `S54 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES57  1 e 1 @24 ]
+"1060
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1067
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"2081
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2417
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2516
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"2570
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2630
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2741
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"2744
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2795
+[v _RX9 RX9 `VEb  1 e 0 @198 ]
+"2813
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2843
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2978
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2981
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"3023
+[v _TX9 TX9 `VEb  1 e 0 @1222 ]
+"3032
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"3035
+[v _TXIE TXIE `VEb  1 e 0 @1124 ]
+"3038
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"9 C:\Users\rlmarco\MPLABXProjects\demo-codes\uart.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"11
+[v main@str str `[20]uc  1 a 20 0 ]
+"21
+} 0
+"55 C:\Users\rlmarco\MPLABXProjects/includes/uart.h
+[v _uart_tx_str uart_tx_str `(v  1 e 1 0 ]
+{
+[v uart_tx_str@str str `*.4DCuc  1 a 1 wreg ]
+"57
+[v uart_tx_str@i i `uc  1 a 1 2 ]
+"55
+[v uart_tx_str@str str `*.4DCuc  1 a 1 wreg ]
+"57
+[v uart_tx_str@str str `*.4DCuc  1 a 1 3 ]
+"59
+} 0
+"36
+[v _uart_tx_char uart_tx_char `(v  1 e 1 0 ]
+{
+[v uart_tx_char@data data `DCuc  1 a 1 wreg ]
+[v uart_tx_char@data data `DCuc  1 a 1 wreg ]
+[v uart_tx_char@data data `DCuc  1 a 1 0 ]
+"40
+} 0
+"61
+[v _uart_rx_str uart_rx_str `(v  1 e 1 0 ]
+{
+[v uart_rx_str@p_str p_str `*.4uc  1 a 1 wreg ]
+"63
+[v uart_rx_str@ch ch `uc  1 a 1 5 ]
+"64
+[v uart_rx_str@len len `uc  1 a 1 4 ]
+"61
+[v uart_rx_str@p_str p_str `*.4uc  1 a 1 wreg ]
+"64
+[v uart_rx_str@p_str p_str `*.4uc  1 a 1 3 ]
+"84
+} 0
+"42
+[v _uart_rx_char uart_rx_char `(uc  1 e 1 0 ]
+{
+"53
+} 0
+"16
+[v _uart_init uart_init `(v  1 e 1 0 ]
+{
+"34
+} 0

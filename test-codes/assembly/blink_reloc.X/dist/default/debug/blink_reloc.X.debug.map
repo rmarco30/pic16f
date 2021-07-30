@@ -1,0 +1,47 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Sun Oct 04 21:12:50 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+             RESET_VECTOR       code   0x000000    program   0x00001e
+                   .cinit    romdata   0x00001e    program   0x000002
+.config_300001_BUILD/DEFAULT/DEBUG/BLINK_RELOC.    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/DEBUG/BLINK_RELOC.    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/DEBUG/BLINK_RELOC.    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/DEBUG/BLINK_RELOC.    romdata   0x300006    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001f      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+                            0x300005    0x300006      
+            36 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    delay   0x00000e    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                   delay1   0x000000    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                   delay2   0x000001    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                     loop   0x00000c    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                     main   0x000004    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   delay1   0x000000    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                   delay2   0x000001    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                     main   0x000004    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                     loop   0x00000c    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+                    delay   0x00000e    program     static C:\Users\Marco\MPLABXProjects\assembly\blink_reloc.X\blink_reloc.asm
+
+

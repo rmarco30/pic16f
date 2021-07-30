@@ -1,0 +1,58 @@
+Disassembly Listing for blink
+Generated From:
+C:/Users/marco/MPLABX/assembly/blink.X/dist/default/debug/blink.X.debug.cof
+10 4, 20 11:57:15 PM
+
+---  C:/Users/marco/MPLABX/assembly/blink.X/blink_absolute.asm  -----------------------------------------
+                                                  1:     ;***************************************************************************
+                                                  2:     
+                                                  3:     #include <p18f4550.inc>
+                                                  4:     
+                                                  5:     ;***************************************************************************
+                                                  6:     ; configuration bits
+                                                  7:     
+                                                  8:         CONFIG WDT = OFF            ; disable watchdog timer
+                                                  9:         CONFIG MCLRE = ON           ; MCLEAR Pin on
+                                                  10:        CONFIG LVP = OFF            ; Low-Voltage programming disabled
+                                                  11:        CONFIG FOSC = INTOSCIO_EC   ; Internal oscillator, port function on RA6
+                                                  12:    
+                                                  13:    ;***************************************************************************
+                                                  14:    ; variable definitions
+                                                  15:    
+                                                  16:        cblock  0x060               ; general purpose register start at address 0x060
+                                                  17:        delay1                   ; delay1 will have address 0x061
+                                                  18:        delay2                   ; delay2 will have address 0x062
+                                                  19:        endc
+                                                  20:    
+                                                  21:    ;***************************************************************************
+                                                  22:    ; reset vector. this code will execute after a reset
+                                                  23:    
+                                                  24:        org     0                   
+0000  EF02     GOTO 0x4                           25:        goto    main
+0002  F000     NOP
+                                                  26:    
+                                                  27:    ;***************************************************************************
+                                                  28:    ; main program starts here
+                                                  29:        
+                                                  30:    main:
+                                                  31:    ;    delay1 res 0x061
+                                                  32:    ;    delay2 res 0x062
+0004  6A83     CLRF PORTD, ACCESS                 33:        clrf    PORTD
+0006  6A95     CLRF TRISD, ACCESS                 34:        clrf    TRISD
+0008  6B60     CLRF 0x60, BANKED                  35:        clrf    delay1
+000A  6B61     CLRF 0x61, BANKED                  36:        clrf    delay2
+                                                  37:    
+                                                  38:    loop:
+000C  7283     BTG PORTD, 1, ACCESS               39:        btg     PORTD, RD1          ;Toggle PORT D PIN 1 (20)
+                                                  40:    
+                                                  41:    delay:
+000E  2F60     DECFSZ 0x60, F, BANKED             42:        decfsz  delay1, 1           ;Decrement Delay1 by 1, skip next instruction if Delay1 is 0
+0010  EF07     GOTO 0xE                           43:        goto    delay
+0012  F000     NOP
+0014  2F61     DECFSZ 0x61, F, BANKED             44:        decfsz  delay2, 1
+0016  EF07     GOTO 0xE                           45:        goto    delay
+0018  F000     NOP
+001A  EF06     GOTO 0xC                           46:        goto    loop
+001C  F000     NOP
+                                                  47:    
+                                                  48:        end

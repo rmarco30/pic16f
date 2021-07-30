@@ -1,0 +1,43 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Mon Oct 05 00:08:43 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000020
+                   .cinit    romdata   0x000020    program   0x000002
+.config_300001_BUILD/DEFAULT/DEBUG/BLINK_ABSOLU    romdata   0x300001    program   0x000001
+.config_300003_BUILD/DEFAULT/DEBUG/BLINK_ABSOLU    romdata   0x300003    program   0x000001
+.config_300005_BUILD/DEFAULT/DEBUG/BLINK_ABSOLU    romdata   0x300005    program   0x000001
+.config_300006_BUILD/DEFAULT/DEBUG/BLINK_ABSOLU    romdata   0x300006    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000021      
+                            0x300001    0x300001      
+                            0x300003    0x300003      
+                            0x300005    0x300006      
+            38 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    delay   0x000010    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+                     loop   0x00000e    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+                     main   0x000004    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     main   0x000004    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+                     loop   0x00000e    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+                    delay   0x000010    program     static C:\Users\marco\MPLABX\assembly\blink.X\blink_absolute.asm
+
+
